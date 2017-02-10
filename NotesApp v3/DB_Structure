@@ -1,0 +1,30 @@
+mysql> desc users;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| userID   | int(11)     | NO   | PRI | 0       |       |
+| name     | varchar(25) | YES  |     | NULL    |       |
+| email    | varchar(25) | YES  |     | NULL    |       |
+| password | varchar(25) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.05 sec)
+
+mysql> desc notes;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| noteID   | int(11)     | NO   | PRI | 0       |       |
+| noteName | varchar(25) | YES  |     | NULL    |       |
+| ownerID  | int(11)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.05 sec)
+
+mysql> desc sharing;
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| noteID     | int(11) | YES  | MUL | NULL    |       |
+| userID     | int(11) | YES  |     | NULL    |       |
+| permission | int(11) | YES  |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
+3 rows in set (0.05 sec)

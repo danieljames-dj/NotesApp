@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<title>Zoho Notes</title>
+	</head>
+	<body>
+		<div style="padding:10px;">
+			
+			<!-- Header -->
+			<div class="page-header">
+		  		<h1 style="text-align:center;">Zoho Notes</h1>
+			<div>
+
+			<!-- Login Form -->
+			<div class="col-md-6" style="padding:20px">
+				<h3>Login</h3>
+				<form id="login_form" onsubmit="return false">
+					<div class="form-group" id="email_div">
+						<label for="email">Email address:</label>
+						<input type="email" class="form-control" id="email">
+					</div>
+					<div class="form-group" id="pwd_div">
+						<label for="pwd">Password:</label>
+						<input type="password" class="form-control" id="pwd">
+					</div>
+					<button id="login_button" class="btn btn-default">Login</button>
+				</form>
+			</div>
+
+			<!-- Register Form -->
+			<div class="col-md-6" style="padding:20px">
+				<h3>Register</h3>
+				<form id="register_form" onsubmit="return false">
+					<div class="form-group" id="name_divr">
+						<label for="name">Name:</label>
+						<input type="text" class="form-control" id="name_r">
+						<span class="help-inline" id="name_reg_error"></span>
+					</div>
+					<div class="form-group" id="email_divr">
+						<label for="email">Email address:</label>
+						<input type="email" class="form-control" id="email_r">
+						<span class="help-inline" id="email_reg_error"></span>
+					</div>
+					<div class="form-group" id="pwd_divr">
+						<label for="pwd">Password:</label>
+						<input type="password" class="form-control" id="pwd_r">
+						<span class="help-inline" id="password_reg_error"></span>
+					</div>
+					<div class="form-group" id="pwd1_divr">
+						<label for="pwd1">Confirm Password:</label>
+						<input type="password" class="form-control" id="pwd_r1">
+						<span class="help-inline" id="password_reg1_error"></span>
+					</div>
+					<button id="register_button" class="btn btn-default">Register</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- Javascript code -->
+		<script src="indexScript.js"></script>
+	</body>
+</html>

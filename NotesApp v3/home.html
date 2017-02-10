@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<style type="text/css">
+			.modal {
+				display:block;
+			}
+		</style>
+
+		<title>Zoho Notes</title>
+	</head>
+	<body>
+		<div style="padding:10px;">
+
+			<!-- Header -->
+			<div class="page-header">
+			  	<h1 style="text-align:center;">Zoho Notes</h1>
+			<div>
+
+			<!-- Workspace -->
+			<div class="panel panel-primary">
+				<div class="panel-heading">WORKSPACE</div>
+				<div class="panel-body">
+					<form id="workspace" onsubmit="return false">
+					  <div class="form-group" id="noteName">
+						<label for="title">TITLE</label>
+						<input id="title" type="name" class="form-control">
+					  </div>
+					  <div class="form-group" id="pwd_div">
+						<label for="content">CONTENT</label>
+						<textarea id="content" type="text" class="form-control" cols="50" rows="10"></textarea>
+					  </div>
+					  <button id="button1" class="btn btn-default">SAVE</button>
+					  <button id="button2" class="btn btn-default">EXPORT</button>
+					  <button id="button3" class="btn btn-default">DELETE</button>
+					  <button id="button4" class="btn btn-default">SHARE</button>
+					  <button id="button5" class="btn btn-default">NEW NOTE</button>
+					  <input type="file" id="my_file" style="display:none">
+					</form>
+				</div>
+			</div>
+
+			<!-- List of notes -->
+			<div class="panel panel-primary">
+				<div class="panel-heading">LIST OF NOTES</div>
+				<div class="panel-body">
+					<table id="list" class="table table-hover">
+						<thead>
+							<tr>
+								<th>Note</th>
+								<th>Access</th>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody id="list_body">
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- Logout -->
+			<button id="logout" class="btn btn-default">Log Out</button>
+
+		</div>
+
+		<!-- Share Modal -->
+		<div class="modal fade in" id="myModal" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button id="modalClose" type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Share</h4>
+					</div>
+					<div class="modal-body">
+						<form id="share" onsubmit="return false">
+							<div class="form-group" id="shareMail">
+								<label for="mailID">Enter email ID</label>
+								<input id="mailID" type="email" class="form-control">
+							</div>
+							<label class="radio-inline"><input id="r1" type="radio" name="optradio">Read only</label>
+							<label class="radio-inline"><input id="r2" type="radio" name="optradio">Read write</label>
+							<label class="radio-inline"><input id="r3" type="radio" name="optradio">Co owner</label>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button id="shareSubmit" type="button" class="btn btn-default">Share</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Javascript code -->
+		<script src="homeScript.js"></script>
+	</body>
+</html>
